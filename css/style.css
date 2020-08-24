@@ -1,0 +1,182 @@
+body{
+    background: url("../img/fone.jpg");
+    background-size: cover;
+    height: 100vh;
+    position: relative;  
+    background-position: center center;      
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+@font-face{
+    font-family: 'Exo2.0-Thin';
+    src: url('../fonts/Exo2.0-Thin.otf');
+    font-weight: normal;
+    font-style: normal;    
+    }
+    img{
+        width: 100%;
+    }
+h1{
+    font-family: 'Exo2.0-Thin', sans-serif;
+    color: #fff;
+    text-align: center;
+    font-size: 36px;
+    margin: 20px;   
+}
+.main-block{
+    width: 1280px;
+    height: 680px;
+} 
+p, h2, h3, #p2, #p3, #p44 {
+    position: absolute;
+    font-family: 'Trebuchet MS', sans-serif;
+    left: 60px; 
+}
+p{
+    top: 20px;
+    font-size: 16px;
+    font-weight: normal;
+}
+h2{
+    top: 40px;
+    font-weight: bold;
+    font-size: 46px;
+}
+h3{
+    top: 90px;
+    font-weight: bold;
+    font-size: 24px;
+}
+#p2{
+    top: 130px;
+}
+#p3{
+    top: 150px;
+}
+#p4{
+    top: 170px;
+}
+/* Товар есть---------------- */
+.card-enable, .card-disable {    
+    padding: 5px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+}
+.card-enable{
+    background-color: #1698d9;
+}
+.card-disable{
+    background-color: #ccc;
+    opacity: 0.7;
+}
+.card-enable::after, .card-disable::after {
+    content: '';
+    position: absolute; 
+    top: 0; left: 0; 
+    width: 0; height: 0;
+    border-style: solid;
+    border-width: 0 0 40px 40px;
+    border-color: #000 transparent transparent #000;
+   }
+.elipse{
+    background-color: #1698d9;
+}
+.card-disable .elipse, .card-disable .elipse:hover {
+    background-color: #ccc;
+}
+.elipse:hover{
+    background-color: #2ea8e6;
+}
+.elipse{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+.select {
+    background-color: #da236f;
+}
+.elipse.select:hover {
+    background-color: #e62e7a;
+}
+.elipse span{
+    font-size: 40px;
+    color: #fff;
+    display: block;
+    text-align: center;
+}
+.elipse p{
+    color: #fff;
+    font-size: 24px;
+    margin-top: 22px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.action-2{
+    display: none;
+}
+.action, .action-2, .action-3{
+    color: #fff;
+    position: static;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.action-3 {
+    color: #b8b847;
+    display: none;
+}
+.card-disable ~ .action-3{
+    display: block;
+}
+.card-disable ~ .action{
+    display: none;
+}
+.action span{
+    color: #1698d9;
+}
+.action span:hover{
+    color: #2ea8e6;
+}
+
+
+
+@media (min-width: 575px) and (max-width: 991px) {
+    .cat-1 {
+    margin-left: 25%;
+    }
+}
+@media (min-width: 575px) and (max-width: 767px) {
+    h2 {
+        font-size: 33px;
+        top: 52px;
+        }
+        .card-enable p, .card-disable p {
+        left: 40px;
+        font-size: 14px;
+        }
+        .card-enable::after, .card-disable::after {
+            border-width: 0 0 30px 30px;
+        }
+        #p2 {
+            top: 122px;
+        }
+        #p3 {
+            top: 138px;
+        }
+        #p4 {
+            display: none;
+        }
+}
+@media (max-width: 574px) {
+    h1 {
+        margin-top: 70px;
+    }
+}
